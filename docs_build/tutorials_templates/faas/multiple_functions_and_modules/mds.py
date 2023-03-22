@@ -3,118 +3,119 @@ def func1():
     # Multiple Functions and Modules
     ## Multiple Functions
     ### Create and Deploy a Package of Several Functions
-    First, login to the Dataloop platform:
+    As usual, you must first login to the Dataloop platform (if you haven't already):
     """
 
 
 def func2():
     """
-    Let’s define the project and dataset you will work with in this tutorial.
-    To create a new project and dataset:
+    You must then define the Project and Dataset you will work with in this tutorial. If you already have a Project and Dataset created, you can use the existing ones.
+    Otherwise, you can create a new Project and Dataset using the following code:
     """
 
 
 def func3():
     """
-    To use an existing project and dataset:
+    If you already have a Project and Dataset available, you can skip the step above, and just use (or `GET`) an existing Project and Dataset:
     """
 
 
 def func4():
     """
     ### Write your code
-    The following code consists of two image-manipulation methods: 
-    * RGB to grayscale over an image
-    * CLAHE Histogram Equalization over an image - Contrast Limited Adaptive Histogram Equalization (CLAHE) to equalize images
+    The following code consists of two image-manipulation functions: 
+    * RGB to grayscale over an image;
+    * CLAHE Histogram Equalization over an image - Contrast Limited Adaptive Histogram Equalization (CLAHE) to equalize images.
     
-    To proceed with this tutorial, copy the following code and save it as a main.py file. 
+    To proceed with this tutorial, copy the following code, save it as a main.py file, and place it somewhere so you can find it easily, as we will use it later. 
     """
 
 
 def func5():
     """
     ### Define the module
-    Multiple functions may be defined in a single package under a “module” entity. This way you will be able to use a single codebase for various services.
+    Multiple functions may be defined in a single Package under a “module” entity. This way you will be able to use a single codebase for multiple Services.
     
-    Here, we will create a module containing the two functions we discussed. The “main.py” file you downloaded is defined as the module entry point. Later, you will specify its directory file path.
+    Here, we will create a module containing the two functions we discussed. The “main.py” file you downloaded is defined as the module entry point. You will later specify its directory file path.
     """
 
 
 def func6():
     """
-    ### Push the package
-    When you deployed the service in the previous tutorial (“Single Function”), a module and a package were automatically generated. 
+    ### Push the Package
+    When you deployed the Service in the previous tutorial (“Single Function”), a module and a Package were automatically generated. 
 
-    Now we will explicitly create and push the module as a package in the Dataloop FaaS library (application hub). For that, please specify the source path (src_path) of the “main.py” file you downloaded, and then run the following code:
+    Now we will explicitly create and push the module as a Package in the Dataloop FaaS library (application hub). For that, please specify the source path (src_path) of the “main.py” file you downloaded, and then run the following code:
     """
 
 
 def func7():
     """
-    ### Deploy a service
-    Now that the package is ready, it can be deployed to the Dataloop platform as a service.
-    To create a service from a package, you need to define which module the service will serve. Notice that a service can only contain a single module. All the module functions will be automatically added to the service.
+    ### Deploy a Service
+    Now that the Package is ready, it can be deployed to the Dataloop platform as a service.
+    
+    To create a Service from a Package, you need to define which module the Service will serve. Notice that a Service can only contain a single module. All the module functions will be automatically added to the Service.
 
-    Multiple services can be deployed from a single package. Each service can get its own configuration: a different module and settings (computing resources, triggers, UI slots, etc.).
+    Multiple Services can be deployed from a single Package. Each service can get its own configuration: a different module and settings (computing resources, Triggers, UI slots, etc.).
 
-    In our example, there is only one module in the package. Let’s deploy the service:
+    In our example, there is only one module in the Package. Let’s deploy the Service using the code below:
     """
 
 
 def func8():
     """
-    ### Trigger the service
-    Once the service is up, we can configure a trigger to automatically run the service functions. When you bind a trigger to a function, that function will execute when the trigger fires. The trigger is defined by a given time pattern or by an event in the Dataloop system.
+    ### Trigger the Service
+    Once the Service is deployed, we can configure a Trigger to automatically run the Service functions. When you bind a Trigger to a function, that function will execute when the Trigger fires. The Trigger is defined by a given time pattern or by an event in the Dataloop system.
 
-    Event based trigger is related to a combination of resource and action. A resource can be any entity in our system (item, dataset, annotation, etc.) and the associated action will define a change in the resource that will prompt the trigger (update, create, delete). You can only have one resource per trigger.
+    An event based Trigger is related to a combination of resource and action. A resource can be any entity in our system (Item, Dataset, Annotation, etc.) and the associated action will define a change in the resource that will prompt the Trigger (update, create, delete). You can only have one resource per Trigger.
 
 
     The resource object that triggered the function will be passed as the function's parameter (input). 
 
-    Let’s set a trigger in the event a new item is created:
+    Let’s set a Trigger when a new Item is created, using the code below:
     """
 
 
 def func9():
     """
-    In the defined filters we specified a dataset. Once a new item is uploaded (created) in this dataset, the CLAHE function will be executed for this item. You can also add filters to specify the item type (image, video, JSON, directory, etc.) or a certain format (jpeg, jpg, WebM, etc.).
+    In the Filters we defined above, we specified a Dataset using its ID. Once a new Item is uploaded (created) in this Dataset, the CLAHE function will automatically be executed for this new Item. You can also add Filters to specify the Item type (image, video, JSON, directory, etc.) or a certain format (jpeg, jpg, WebM, etc.).
 
-    A separate trigger must be set for each function in your service.
-    Now, we will define a trigger for the second function in the module rgb2gray. Each time an item is updated, invoke the rgb2gray function:
+    A separate Trigger must be set for each function in your Service.
+    
+    Now, we will define a Trigger for the second function in the module `rgb2gray`. Each time an Item is updated, this Trigger will invoke the rgb2gray function:
     """
 
 
 def func10():
     """
-    To trigger the function only once (only on the first item update), set TriggerExecutionMode.ONCE instead of TriggerExecutionMode.ALWAYS.
+    To trigger the function only once (only on the first Item update), you can set `TriggerExecutionMode.ONCE` instead of `TriggerExecutionMode.ALWAYS`.
 
     ### Execute the function
-    Now we can upload (“create”) an image to our dataset to trigger the service. The function clahe_equalization will be invoked:
+    Now we can upload an image to our Dataset to trigger the Service. Be sure to choose an image you wish, and then change the `local_path` to the exact location of that image, and change the `hamster.jpg` to the name of the image you want to upload.
+    To see the Item (image) you just uploaded, you can just run a simple `item.open_in_web()`, which will open the Item in the web-view of Dataloop.
+    The function `clahe_equalization` will be invoked when the new Item is uploaded:
     """
 
 
 def func11():
     """
-    Remote path is optional, images will go to the main directory by default.
-
-    To see the original item, please click [here](https://raw.githubusercontent.com/dataloop-ai/dtlpy-documentation/main/assets/images/hamster.jpg/).
+    Remote path is an optional parameter you can choose if you want the image to be sent toa specific directory; by default, images will go to the main directory.
     
     ### Review the function's logs
-    You can review the execution log history to check that your execution succeeded:
+    You can review the execution log history to check that your execution succeeded, using the code below:
     """
 
 
 def func12():
     """
-    The transformed image will be saved in your dataset. 
-    Once you see in the log that the execution succeeded, you may open the item to see its transformation:
+    The transformed image will be saved in the Dataset you chose in the beggining. Once you open the log and see that the Execution succeeded, you may open the Item in web-view to see its transformation:
     """
 
 
 def func13():
     """
     ### Pause the service:
-    We recommend pausing the service you created for this tutorial so it will not be triggered:
+    We recommend pausing the Service you created for this tutorial so it will not be triggered:
     """
 
 
@@ -123,23 +124,22 @@ def func14():
     Congratulations! You have successfully created, deployed, and tested Dataloop functions!
 
     ## Multiple Modules
-    You can define multiple different modules in a package. A typical use-case for multiple-modules is to have a single code base that can be used by a number of services (for different applications). For example, having a single YoloV4 codebase, but creating different modules for training, inference, etc.
+    You can also define multiple different modules in a Package. A typical use-case for multiple-modules is to have a single code base that can be used by multiple Services (for different applications). For example, having a single YOLOv4 codebase, but creating different modules for training, inference, etc.
 
-    When creating a service from that package, you will need to define which module the service will serve (a service can only serve a single module with all its functions). For example, to push a 2 module package, you will need to have 2 entry points, one for each module, and this is how you define the modules:
+    When creating a Service from that Package, you will need to define which module the Service will serve (a Service can only serve a single module with all of its functions). For example, to push a 2-module Package, you will need to have 2 entry points, one for each module. This is how you define the modules:
 
     """
 
 
 def func15():
     """
-    Create the package with your modules
+    The code below will push the modules we previously defined to the Package, and then will update the `package` variable:
     """
 
 
 def func16():
     """
-    You will pass these modules as a param to packages.push()
-    After that, when you deploy the package, you will need to specify the module name:
-    Note: A service can only implement one module.
+    After doing that, when you deploy the Package, you will need to specify the name of the module you want to use. 
+    Remember that a Service can only implement one module.
 
     """
