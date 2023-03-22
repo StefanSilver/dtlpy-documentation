@@ -1,42 +1,41 @@
 def func1():
     """
     # Basic Use Case: Single Function
-    ## Create and Deploy a Sample Function
-    Below is an image-manipulation function in Python to use for converting an RGB image to a grayscale image. The function receives a single item, which later can be used as a trigger to invoke the function:
+    ## Create and Deploy a Function
+    In this section, you will learn how to create and execute a simple function using Dataloop's FaaS system. Below you will find an image manipulation function in Python, which converts an RGB image to a grayscale image. The function receives a single Item, which later can be used as a Trigger to invoke the function:
     """
 
 
 def func2():
     """
-    You can now deploy the function as a service using Dataloop SDK. Once the service is ready, you may execute the available function on any input:
+    Once the function is defined, you can deploy the it as a Service using Dataloop's Python SDK. Once the Service is ready, you may execute the available function on any input image you desire. Below, we ```GET``` the Project we want to add the function to, and we then deploy that function:
     """
 
 
 def func3():
     """
-    ## Execute the function
-    An execution means running the function on a service with specific inputs (arguments). The execution input will be provided to the function that the execution runs.
+    ## Executing the function
+    An Execution means running the function on a Service with specific inputs (arguments). The Execution input will be provided to the function that the Execution runs.
 
-    Now that the service is up, it can be executed manually (on-demand) or automatically, based on a set trigger (time/event). As part of this tutorial, we will demonstrate how to manually run the “RGB to Gray” function. 
+    Now that the Service is up, it can be executed manually (on-demand) or automatically, based on a set Trigger (time/event). In this tutorial, we will demonstrate how to manually run the “RGB to Gray” function. 
 
-    To see the item we uploaded, run the following code:
+    To see the Item we uploaded earlier, run the following code to open the web-version of Dataloop:
     """
 
 
 def func4():
     """
-    Let’s convert the item from RGB to grayscale, using the service we created:
+    We can now convert the Item you've added (and seen on web-view) from RGB to grayscale, using the Service we just created:
     """
 
 
 def func5():
     """
-    For executing on multiple items (with a filter) use:
+    We can also execute the the Function on multiple Items using a Filter:
     """
 
 
 def func6():
     """
-    The transformed image will be saved in your dataset in the folder specified.
-    You may now open the item received upon execution:
+    The transformed image will be saved in your Dataset in the specified folder. You may now open the Item in web-view, to see the changes:
     """
