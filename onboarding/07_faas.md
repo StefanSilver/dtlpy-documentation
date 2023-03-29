@@ -68,9 +68,17 @@ service = project.services.deploy(func=rgb2gray,
                                   service_name='grayscale-item-service')
 ```
 
-Execution refers to running a function on a Service using specific inputs, known as arguments, which are provided to the function. The Service can be executed either manually (on demand) or automatically based on a trigger, such as time or an event. In this tutorial, we will show you how to manually execute the `rgb2gray` function.
+Execution refers to running a function on a Service using specific inputs, known as arguments, which are provided to the function. The Service can be executed either manually (on demand) or automatically based on a trigger, such as time or an event. To manually execute the `rgb2gray` function, use the code below:
+```python
+execution = service.execute(project_id=project.id,
+                            item_id=item.id,
+                            function_name='rgb2gray')
+execution.logs(follow=True)
+execution = execution.wait()
+print(execution.latest_status)
+```
 
-To create a Trigger that runs the `rbg2gray` function, you can use the following code:
+You can also create a Trigger that runs the `rbg2gray` function, with the following code:
 
 ```python
 trigger = service.triggers.create(name=package_name,
@@ -88,10 +96,12 @@ item.open_in_web()
 
 That's it for the FaaS Onboarding. If you want to find out more about FaaS and how to use it in more advanced ways, here are some useful links:
 
-1. [Dataloop's FaaS documentation](https://dataloop.ai/docs/faas);
-2. [Python SDK Cheat-Sheet Section](https://dataloop.ai/docs/sdk-cheatsheet)
-3. [Advanced Auto-annotation Service](https://dataloop.ai/docs/auto-annotation-service)
-4. [Pre-annotation service tutorial](https://dlportal-demo.redoc.ly/tutorials/faas/auto\_annotate/chapter/#model-and-weights-files);
-5. Tutorial and code for [extracting Exif (Exchangeable Image File Format) information](https://github.com/dataloop-ai/image-exif) from images and uploading it.
+1. [Dataloop's FaaS general documentation](https://dataloop.ai/docs/faas);
+2. [Dataloop's Python SDK-focused FaaS documentation](https://developers.dataloop.ai/tutorials/faas/);
+3. [Loading FaaS function in the Web-UI and using triggers to execute it](https://github.com/dataloop-ai-apps/load-faas-via-web-ui);
+4. [Python SDK Cheat-Sheet Section](https://dataloop.ai/docs/sdk-cheatsheet)
+5. [Advanced Auto-annotation Service](https://dataloop.ai/docs/auto-annotation-service)
+6. [Pre-annotation service tutorial](https://dlportal-demo.redoc.ly/tutorials/faas/auto\_annotate/chapter/#model-and-weights-files);
+7. Tutorial and code for [extracting Exif (Exchangeable Image File Format) information](https://github.com/dataloop-ai/image-exif) from images and uploading it.
 
 Now that you have learned how to work with FaaS provided by Dataloop, let's move on and talk about Pipelines in the next chapter.
