@@ -4,7 +4,7 @@
   "description": "Getting started on the Dataloop platform",
   "content": [
     {
-      "displayName": "SDK Overview",
+      "displayName": "Quick-Start Guide",
       "description": "SDK overview.",
       "location": "getting_started/sdk_overview/chapter.md"
     }
