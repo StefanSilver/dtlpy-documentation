@@ -134,7 +134,7 @@ M2M Login is recommended when you want to:
     - run commands on the platform without an ongoing internet connection.  
     - run API commands directly from an external system to Dataloop.   
 
-> :information_source: This can be done with your email and password (signup with a password), or using project bots (which is NOT is the scope of this tutorial).  
+**Note**: This can be done with your email and password (signup with a password), or using project bots ([see how to use bots to log in](https://github.com/dataloop-ai/dtlpy-documentation/blob/main/onboarding/02_login_and_project_and_dataset_creation.md)).  
 
 ```python
 dl.login_m2m(email=email, password=password)
