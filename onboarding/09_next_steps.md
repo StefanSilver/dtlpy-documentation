@@ -11,6 +11,6 @@ We welcome you to continue your journey with Dataloop by using the following lin
 3. [Structured, Public, and Fully Verified to Work Dataloop GitHub Developer Community Space](https://github.com/dataloop-ai-apps)
 4. [Unstructured, Public Dataloop GitHub Space](https://github.com/dataloop-ai)
 
-If you have any questions, we encourage you to submit your question to the [Dataloop Developer Community](https://github.com/dataloop-ai-apps/dataloop-devs/discussions/new?category=q-a). One of our crack Developer Success Engineers or someone from the community will help as quickly as they can.
+If you have any questions, we encourage you to submit your question to the [Dataloop Developer Community](https://github.com/dataloop-ai-apps/dataloop-devs/discussions/new?category=q-a). One of our  Developer Success Engineers or someone from the community will help as quickly as they can.
 
 You can submit issues to our Support team by opening a question through the support widget located in the upper right corner of the platform UI. Our team is available to assist you with any inquiries you may have and we are happy to help!
