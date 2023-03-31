@@ -119,14 +119,14 @@ This command is also useful because it will execute only once every 24 hours.
 
 A web browser login screen will be displayed after execution, where you will need to use your Dataloop credentials to log in to the platform:
 
-![alt_text](../../../assets/log_in/login.png "image_tooltip")
+![image](https://user-images.githubusercontent.com/58508793/229102303-75ea6fcb-cb38-4e5b-adbd-e7259760c99f.png)
 
 3. **Enter** your credentials, or alternatively login using a Google account.
 
 Once your credentials have been verified a **confirmation message** will be displayed:
 
-![alt_text](../../../assets/log_in/login_successful.png "image_tooltip")
-  
+![image](https://user-images.githubusercontent.com/58508793/229102326-675025e4-dd05-4c04-8e5c-725d86216b08.png)
+
 ## Machine-to-Machine Login  
 Long-running SDK jobs require API authentication.  The M2M flow allows machines to obtain valid, signed JWT (authentication token) and automatically refresh it, without the need for a web browser login.  
   
