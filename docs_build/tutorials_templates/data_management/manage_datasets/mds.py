@@ -2,7 +2,11 @@ def section1():
     """
     # Manage Datasets
 
-    Datasets are Buckets in the Dataloop system that hold a collection of data Items of any type, regardless of their storage location (be it Dataloop storage or external cloud storage). In this section you will learn how to manage your Datasets in Dataloop.
+    Datasets are Buckets in the Dataloop system that hold a collection of data Items of any type, regardless of their storage location (be it Dataloop storage or external cloud storage). 
+    
+    If you want to learn more about Datasets, consult our [Onboarding](https://github.com/dataloop-ai/dtlpy-documentation/blob/main/onboarding/02_login_and_project_and_dataset_creation.md) and our general [Dataset Documentation](https://dataloop.ai/docs/data-management-features-overview).
+    
+    In this section you will learn how to manage your Datasets in Dataloop.
 
     ## Create Dataset
 
