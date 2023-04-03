@@ -30,7 +30,7 @@ def section2():
 def section3():
     """
     ### Add a Layer to the Lambda
-    We have created an AWS Layer with the Dataloop's Python SDK. You must now Click [here](https://storage.googleapis.com/dtlpy/aws-python3.8-lambda-layer/layer.zip/) to download the zip file.
+    We have created an AWS Layer with the Dataloop's Python SDK. You must now Click [here](https://storage.googleapis.com/dtlpy/aws-python3.8-lambda-layer/layer.zip) to download the zip file.
     
     Because the layer's size is larger than 50MB you cannot use it directly (due to AWS restrictions), and need to upload it to a bucket first. Once uploaded, create a new layer for the dtlpy environment, using the following steps:
     1. Go to the layers screen and "click Add Layer".
