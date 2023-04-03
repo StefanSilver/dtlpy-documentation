@@ -54,21 +54,21 @@ def section3():
     * Click -> Deploy.
 
 
-    7. Add another function for delete actions
-       * Repeat the process
-       * Create another function for `delete` with `delete event` with the following code and the same settings
-       * Trigger -> Event type ->  On (deleting) file in the selected bucket
-       * Entry point: Your function name from the code snippet (default `delete_gcs`)
+    7. Add another function for delete actions:
+       * Repeat the process above.
+       * Create another function for `delete` with `delete event` with the code below and the same settings.
+       * Trigger -> Event type ->  On (deleting) file in the selected Bucket.
+       * Entry point: Your function name from the code snippet (default `delete_gcs`).
     """
 
 
 def section4():
     """
-    ### You're good to go!
+    ** If you followed the guide, you should now have your GCS bound to the Dataloop Dataset, which will synch automatically!
 
 
 
-    #### For pictures examples:
+    ### Here are some graphical examples of this process:
 
     ![add_layer](../../../../assets/bind_gcs/create_function.png)
     ![add_layer](../../../../assets/bind_gcs/settings.png)
