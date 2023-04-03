@@ -9,7 +9,7 @@ def section1():
     - Data Version "Snapshot" - Use our versioning feature as a way to save data (Items, Annotations, Metadata) before any major process. For example, a Snapshot can serve as a roll-back mechanism to the original Datasets, without losing the data, in case an error breaks your Dataset.
 
     ## Clone Datasets
-    Cloning a Dataset creates a new Dataset with the same files as the original. Files are actually a reference to the original binary and not a new copy of the original, so your cloud data remains safe and protected. When cloning a Dataset, you can add a destination Dataset, the remote file path, and more. You can see how the cloning of a dataset can be done, below:
+    Cloning a Dataset creates a new Dataset with the same files as the original. Files are actually a reference to the original binary and not a new copy of the original, so your cloud data remains safe and protected. When cloning a Dataset, you can add a destination Dataset, the remote file path, and more. You can see how the cloning of a Dataset can be done, below:
     """
 
 
