@@ -34,13 +34,13 @@ def section4():
     """
 
     You can visualize an Item uploaded to Dataloop by opening it in the WebUI version of Dataloop. This will open a new tab in which the Item will be shown. To do that, use the simple line of code below:
-    **Note:** The `.open_in_web()` method can be used for all kinds of Dataloop entities, such as Projects (`poject.open_in_web()`)
+    **Note:** The `.open_in_web()` method can be used for all kinds of Dataloop entities, such as Projects (`project.open_in_web()`), Datasets ('dataset.open_in_web()'), etc.
     """
 
 
 def section5():
     """
     ## Upload Items with Metadata
-    You can upload items as a table using a Pandas DataFrame that will let you upload items with info (annotations, metadata such as confidence, filename, etc.) attached to it.
+    You can also upload Items as a table using a Pandas DataFrame, which will let you upload Items with the information (Annotations, Metadata such as confidence, filename, etc.) attached to them. The code below demonstrates how to do that:
 
     """
