@@ -1,45 +1,59 @@
 def section1():
     """
     # Upload & Manage Annotations
+    Dataset Items are annotated using Labels. A Label is composed of various Label Settings and Instructions that are defined by a Dataset’s Recipe. For example, an Item can contain 1 Label defined as a Classification, to categorize the entire data sample. It can also contain multiple Annotation Labels covering only parts of your data sample to identify specific sections of that Item. For example, if the Item contains cats and dogs, you might find a label for Cat and a label for Dog in the Recipe.
+    
+    If you want to read more about Annotations, [consult our Annotation Documentation](https://dataloop.ai/docs/classify-item).
+    
+    Classification is used to categorize an entire data sample. For example, a Classification label can be used to classify product images under categories, subcategories, and characteristics, such as men’s clothes, polo shirts, hand cremes, etc.
+
+    The Python SDK can add Classification Labels to an item using 2 steps:
+    - Firstly, you need to add a Classification Label to be a part of the Dataset's Recipe (create Label).
+    - Then, add that Label to the Item you wish to classify.
+    
+    In the code example below, you can see how you can get an Item from the platform in a variable, and then get the Annotations of that Item. Using the `annotation_id='<id>' gets only 1 specific Annotation; deleting that parameter will get all of the Annotations of that Item.
+    
     """
 
 
 def section2():
     """
     ## Upload User Metadata
-    To upload annotations from JSON and include the user metadata, add the parameter local_annotation_path to the dataset.items.upload function, like so: 
+    To upload Annotations from JSON and also include the user Metadata, you can add the parameter local_annotation_path to the dataset.items.upload function, like in the code below: 
     """
 
 
 def section3():
     """
     ## Convert Annotations To COCO Format
-
+    The [COCO dataset](https://cocodataset.org/#home) uses a JSON format that contains information about each dataset and all of the images contained within it, such as image licenses, categories used to classify objects in the images, raw image data such as pixel size, and the all-important annotations of objects in the images.
+    
+    If you want to convert your Annotations to COCO format, you can use the code below:
     """
 
 
 def section4():
     """
-    ## Upload Entire Directory and their Corresponding  Dataloop JSON Annotations
-
+    ## Upload  Directory  Annotations
+    Sometimes you may want to upload an entire Directory and the Corresponding Dataloop JSON Annotations of the Items into the platform. To do that, simply adapt the code below to your needs:
+    
     """
 
 
 def section5():
     """
     ## Upload Annotations To Video Item
-    Uploading annotations to video items needs to consider spanning between frames, and toggling visibility (occlusion). In this example, we will use the following CSV file.
-    In this file there is a single 'person' box annotation that begins on frame number 20, disappears on frame number 41, reappears on frame number 51 and ends on frame number 90.
+    Uploading Annotations to video Items needs to consider the spanning between frames, and toggling the visibility (occlusion). In this example, we will use a CSV file. In this file there is a single 'person' Box Annotation that begins on frame number 20, disappears on frame number 41, reappears on frame number 51 and ends on frame number 90.
 
-    [Video_annotations_example.CSV](https://cdn.document360.io/53f32fe9-1937-4652-8526-90c1bc78d3f8/Images/Documentation/video_annotation_example.csv/)
-
+    [Click here to Download the video_annotations_example.CSV file](https://cdn.document360.io/53f32fe9-1937-4652-8526-90c1bc78d3f8/Images/Documentation/video_annotation_example.csv). 
+    If you want to upload your own Annotation to video Items, you can use the code below, and adapt it to your needs:
     """
 
 
 def section5a():
     """
     ## Upload Annotations In VTT Format
-    The Dataloop builder support VTT files, for uploading Web Text Tracks for video transcription.
+    The Dataloop builder also supports [VTT files](https://fileinfo.com/extension/vtt), for uploading Web Text Tracks for video transcription. Using the code below you can upload Annotations in having the VTT format to Dataloop:
 
     """
 
@@ -47,7 +61,9 @@ def section5a():
 def section5b():
     """
     ## Upload Audio Annotation to an Audio File
-
+    Dataloop offers an Audio Studio that supports both Classification and text transcription operations. These operations enable Annotators to annotate audio files quickly on one hand and for various needs on the other. [Read more about Audio Studio here](https://dataloop.ai/docs/audio-guide).
+    To upload Audio Annotations to an Audio File, you can use the code below:
+    
     """
 
 
@@ -55,7 +71,8 @@ def section6():
     """
     ## Set Attributes On Annotations
     
-    You can set attributes on annotations in hte platform using the SDK. Since Dataloop deprecated a legacy attributes mechanism, attributes are refered to as '2.0' version and need to be set as such first.
+    You can set attributes on Annotations in the platform using Dataloop's Python SDK. Since Dataloop deprecated a legacy attributes mechanism, attributes are refered to as version '2.0' and need to be set as such first (you can see this in the first line of code, below). In this code snippet, you can see how you can set the attribute of an Annotation, using the Annotation's ID:
+    
     
     ## Free Text Attribute
     """
@@ -63,35 +80,36 @@ def section6():
 
 def section7():
     """
-    ## Range Attributes (Slider in UI)
+    Here are some other types of attributes you can set on your Annotations:
+    #### Range Attributes (Slider in UI)
 
     """
 
 
 def section8():
     """
-    ## CheckBox Attribute (Multiple choice)
+    #### CheckBox Attribute (Multiple choice)
     """
 
 
 def section9():
     """
-    ## Radio Button Attribute (Single Choice)
+    #### Radio Button Attribute (Single Choice)
     """
 
 
 def section10():
     """
-    ## Yes/No Attribute
+    #### Yes/No Attribute
     """
 
 
 def section11():
     """
     ## Show Annotations Over Image
-    After uploading items and annotations with their metadata, you might want to see some of them and perform visual validation. 
+    After uploading Items and Annotations with their Metadata, you might want to see some of them so you can perform visual validation. 
     
-    To see only the annotations, use the annotation type *show* option.
+    To see only the Annotations, use the Annotation type `show` option.
 
     """
 
@@ -99,7 +117,7 @@ def section11():
 def section12():
     """
 
-    To see the item itself with all annotations, use the Annotations option.
+    To see the Item itself with all of its Annotations, use the Annotation option.
 
     """
 
@@ -108,16 +126,15 @@ def section13():
     """
 
     ## Download Data, Annotations & Metadata
-    The item ID for a specific file can be found in the platform UI - Click BROWSE for a dataset, click on the selected file, and the file information will be displayed in the right-side panel. The item ID is detailed, and can be copied in a single click.
-
+    The Item ID for a specific file can be found in the platform's Web UI. Click BROWSE for a Dataset, double click the Dataset you want, then click on the selected Item you want to see the details for. The file information will be displayed in the right-side panel. The Item ID is detailed, and can be copied in a single click.
+    
     ## Download Items and Annotations
-    Download dataset items and annotations to your computer folder in two separate folders.
-    To list the download annotation option use `dl.ViewAnnotationOptions`:
-    1. JSON: Download json files with the Dataloop annotation format.
-    2. MASK: Save a PNG image file with the RGB annotation drawn.
-    3. INSTANCE: Saves a PNG with the annotation label ID as the pixel value.
-    4. ANNOTATION_ON_IMAGE: Saves a PNG with the annotation drawn on top of the image.
-    5. VTT: Save `subtitle` annotation type in a VTT format.
+    You can download a Dataset's Items and Annotations to your computer, in two separate folders. To do that, list the download Annotation option using `dl.ViewAnnotationOptions`:
+    1. JSON: Download json files with the Dataloop Annotation format.
+    2. MASK: Save a PNG Image file with the RGB Annotation drawn.
+    3. INSTANCE: Saves a PNG with the Annotation Label ID as the pixel value.
+    4. ANNOTATION_ON_IMAGE: Saves a PNG with the Annotation drawn on top of the image.
+    5. VTT: Save `subtitle` Annotation type in a VTT format.
     6. OBJECT_ID: Save a PNG with the object ID as the pixel value.
 
     """
@@ -125,7 +142,7 @@ def section13():
 
 def section14():
     """
-    NOTE: The annotation option can also be a list to download multiple options:
+    NOTE: The Annotation option can also be a list to download multiple options:
 
     """
 
