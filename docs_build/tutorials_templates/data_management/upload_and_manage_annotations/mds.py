@@ -142,7 +142,7 @@ def section13():
 
 def section14():
     """
-    NOTE: The Annotation option can also be a list to download multiple options:
+    **Note**: The Annotation option can also be a list to download multiple options, as seen below:
 
     """
 
@@ -151,11 +151,10 @@ def section15():
     """
 
     ## Filter by Item and/or Annotation
-    * **Items filter** - download filtered items based on multiple parameters, like their directory.
-    You can also download items based on different filters. Learn all about item filters [here](https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/item_level/chapter.md/).
-    * **Annotation filter** - download filtered annotations based on multiple parameters like their label.
-    You can also download items annotations based on different filters, learn all about annotation filters [here](https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/annotation_level/chapter.md/).
-    This example will download items and JSONS from a dog folder of the label 'dog'.
+    * **Items Filter** - allows you to download filtered Items based on various parameters (e.g. their directory). You can also download Items based on multiple different Filters. Learn more [about Item Filters here](https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/item_level/chapter.md/).
+    * **Annotation Filter** - download filtered Annotations based on multiple parameters (e.g. their Label). You can also download Items Annotations based on different Filters, learn all [about Annotation Filters here](https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/annotation_level/chapter.md/). 
+    
+    **Note: **The example below will download Items and JSONS from a dog folder of the Label 'dog'.
 
 
     """
@@ -165,7 +164,7 @@ def section16():
     """
 
     ## Filter by Annotations
-    * **Annotation filter** - download filtered annotations based on multiple parameters like their label. You can also download items annotations based on different filters, learn all about annotation filters [here](https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/annotation_level/chapter.md/).
+    * **Annotation filter** - download filtered Annotations based on multiple parameters like their Label. You can also download Items Annotations based on different Filters, learn all about Annotation Filters [here](https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/annotation_level/chapter.md/).
 
 
     """
@@ -176,10 +175,7 @@ def section17():
 
     ## Download Annotations in COCO/YOLO/VOC Format
 
-    * **Items filter** - download filtered items based on multiple parameters like their directory. You can also download items based on different filters, learn all about item filters [here](https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/item_level/chapter.md/).
-    * **Annotation filter** - download filtered annotations based on multiple parameters like their label. You can also download items annotations based on different filters, learn all about annotation filters [here](https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/annotation_level/chapter.md/).
- 
-    This example will download COCO from a dog items folder of the label 'dog' (edit the script to change to YOLO/VOC).
+    The example  below will show you how to download Annotations in COCO format, from the dog items folder using the Label Filter 'dog'. If you want to download in the other formats, simply uncomment the format you want in the script (while commenting the others), to change between YOLO/VOC/COCO formats.
 
 
     """
@@ -190,9 +186,9 @@ def section18():
 
     ## Exporting Files with File Extension as Part of the Filename
 
-    Files can be exported from a dataset with their file extension as part of the exported filename. The export_version param in dataset.download can be set to ExportVersion.V1 or ExportVersion.V2 to avoid duplication of files with different extensions. This allows items with the same filename and different extensions in the dataset to be saved as different items.
-    * **Old functionality (V1)** – abc.jpg → annotations are saved as abc.png and the JSON is saved as abc.json 
-    * **New functionality (V2)** – abc.jpg → annotations are saved as abc.jpg.png and JSON is saved as abc.jpg.json
+    Files can be exported from a dataset with their file extension as part of the exported filename. The `export_version` parameter in `dataset.download` can be set to `ExportVersion.V1` or `ExportVersion.V2` to avoid duplication of files with different extensions. This allows Items with the same filename and different extensions in the Dataset to be saved as different Items.
+    * **Old functionality (V1)** – `abc.jpg` → Annotations are saved as `abc.png` and the JSON is saved as an `abc.json`  file.
+    * **New functionality (V2)** – `abc.jpg` → Annotations are saved as `abc.jpg.png` and JSON is saved as an `abc.jpg.json` file.
 
     """
 
@@ -202,8 +198,8 @@ def section19():
 
     ## Download NdArray with Numpy
 
-    - only images that have .jpg or .png formats are supported
-    - save_localy=False means it returns a buffer
-    - to_arraymeans it returns the buffer as an array
+    - Only Images that have `.jpg` or `.png` formats are supported.
+    - `save_localy=False` means it returns a buffer.
+    - `to_arraymeans` it returns the buffer as an array
 
     """
