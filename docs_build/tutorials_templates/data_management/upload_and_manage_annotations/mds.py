@@ -200,6 +200,6 @@ def section19():
 
     - Only Images that have `.jpg` or `.png` formats are supported.
     - `save_localy=False` means it returns a buffer.
-    - `to_arraymeans` it returns the buffer as an array
+    - `to_arraymeans` it returns the buffer as an array.
 
     """
