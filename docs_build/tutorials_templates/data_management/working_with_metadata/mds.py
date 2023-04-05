@@ -1,19 +1,19 @@
 def section1():
     """
     # Working with Metadata
+    Before we start working with Metadata, we need to log in. To do that, you can use a simple `dl.login()` line of code, to make sure you are logged in. After that, we must `get` the Project and the Dataset we will be working on, using the code below:
     """
 
 
 def section2():
     """
     ## User Metadata
-    As a powerful tool to manage data based on your categories and information, you can add any keys and values to both the item’s and annotations’ user-metadata sections using the Dataloop SDK. Then, you can use your user-metadata for data filtering, sorting, etc.
+    The Dataloop's Python SDK is a a powerful tool that can be used for managing data based on your categories and information. You can add any keys and values to the User Metadata sections of Items and Annotations. Then you can use your User Metadata to Filter, Sort, and so on.    
     
-    Note
-    When adding metadata to the same item, the new metadata might overwrite existing metadata. To avoid overwriting a field or the entire metadata, use the [list](#list) data type.
+    **Note**: When adding Metadata to the same Item, the new Metadata might overwrite existing Metadata. To avoid overwriting a field or the entire Metadata, use the [list](#list) data type.
 
     ### Metadata Data Types
-    Metadata is a dictionary attribute used with items, annotations, and other entities of the Dataloop system (task, recipe, and more). As such, it can be used with string, number, boolean, list or null types.
+    Metadata is a dictionary attribute used with Items, Annotations, and other entities of the Dataloop system (Task, Recipe, and more). As such, it can be used with string, number, boolean, list or null types. You can see examples of these types below.
     ### String
     """
 
@@ -44,43 +44,46 @@ def section6():
 
 def section7():
     """
-    ### Add new metadata to a list without losing existing data
+    ## Examples
+    The rest of this section will give you some useful code snippets that can be used when working with Metadata.
+    
+    ### Add new Metadata to a list without losing existing data
     """
 
 
 def section8():
     """
-    ### Add metadata to an item's user metadata
+    ### Add Metadata to an Item's User Metadata
     """
 
 
 def section9():
     """
-    Item in platform should have section 'user' in metadata with field 'MyKey' and value 'MyValue'.
+    **Note**: An Item in Dataloop's platform should have section 'user' in its Metadata, with the field 'MyKey' and the value 'MyValue'.
 
-    ### Add metadata to annotations' user metadata
+    ### Add Metadata to Annotations' User Metadata
     """
 
 
 def section10():
     """
-    annotation in platform should have section 'user' in metadata with field 'red' and value True
+    An Annotation in Dataloop's platform should have the section 'user' in Metadata with field 'red' and value True.
 
-    ### Filter items by user metadata
-    #### 1. Get your dataset
+    ## How to Filter Items by User Metadata
+    ### 1. Get your dataset
     """
 
 
 def section11():
     """
-    #### 2. Add metadata to an item
-    You can also <a href="https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/item_level/chapter.md/" target="_blank">add metadata to filtered items</a>
+    ### 2. Add Metadata to an Item
+    **Note:** You can also <a href="https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/item_level/chapter.md/" target="_blank">add metadata to filtered items</a>.
     """
 
 
 def section12():
     """
-    #### 3. Create a filter
+    #### 3. Create a Filter
     """
 
 
@@ -92,12 +95,12 @@ def section13():
 
 def section14():
     """
-    #### 5. Get filtered items
+    #### 5. Get filtered Items
     """
 
 
 def section15():
     """
 
-    ### Modify an existing user metadata field 
+    ### Modify an existing user Metadata field 
     """
