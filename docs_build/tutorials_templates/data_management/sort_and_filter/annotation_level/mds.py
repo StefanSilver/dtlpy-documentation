@@ -1,109 +1,85 @@
 def section1():
     """
-    To access the filters entity click <a href="https://sdk-docs.dataloop.ai/en/latest/entities.html#module-dtlpy.entities.filters" target="_blank">here</a>.
-    ## The Dataloop Query Language - DQL
-    Using The <a href="https://dataloop.ai/docs/api-dql" target="_blank">Dataloop Query Language</a>, you may navigate through massive amounts of data.
-
-    You can *filter*, *sort*, and *update* your metadata with it.
-
-    ### Filters
-    Using filters, you can filter items and get a generator of the filtered items. The filters entity is used to build such filters.
-
-    #### Filters - Field & Value
-    Filter your items or annotations using the parameters in the JSON code that represent its data within our system.
-    Access your item/annotation JSON using <code>to_json()</code>.
-    ##### Field
-    Field refers to the attributes you filter by.
     
-    For example, "dir" would be used if you wish to filter items by their folder/directory.
-
-    ##### Value
-    Value refers to the input by which you want to filter.
-    For example, "/new_folder" can be the directory/folder name where the items you wish to filter are located.
-    #### Sort - Field & Value
-    ##### Field
-    Field refers to the field you sort your items/annotations list by.
-    For example, if you sort by filename, you will get the item list sorted in alphabetical order by filename.
-    See the full list of the available fields <a href="https://dataloop.ai/docs/api-dql" target="_blank">here</a>.
-    ##### Value
-    Value refers to the list order direction. Either ascending or descending.
-
+    # The Dataloop Query Language - DQL
+    Using The <a href="https://dataloop.ai/docs/api-dql" target="_blank">Dataloop Query Language</a>, you may navigate through massive amounts of data. The Dataloop platform gives you different capabilities to organize your data in Datasets, folders, and versioning systems, you still need the ability to query your data. This is where our Dataloop Query Language becomes useful. When using the DQL in the SDK, additional fields such as Sort, Page, and pageSize can be defined to sort the data that is returned from the Query. Every DQL query has the following components:
+    - Resource - The target Resource for the Query; the Resource can be Items or Annotations.
+    - Filter - The Filter includes Attributes and logical operators to filter Items.
+    To access the filters entity click <a href="https://sdk-docs.dataloop.ai/en/latest/entities.html#module-dtlpy.entities.filters" target="_blank">here</a>.
+    ## Filters
+    Filters are part of the Dataset and Task Browsers, enabling you to Filter Items based on every aspect of your files. When multiple Filters are used, the relationship between them will be the AND logical operator. However, the relationship between multiple values in each Filter will be the OR logical operator.
+    By using Filters, you can filter Items and get a generator of the filtered Items. The Filter entity is used to build such Filters.
+    ### Filters - Field & Value
+    Filter your Items or Annotations using the parameters in the JSON code that represent its data within our system. Access your item/annotation JSON using <code>to_json()</code>.
+    A Filter **Field** refers to the attributes you filter by. For example, "dir" would be used if you wish to filter Items by their folder/directory.
+    
+    A Filter **Value** refers to the input by which you want to filter. For example, "/new_folder" can be the directory/folder name where the Items you wish to filter are located.
+    
+    ### Sort - Field & Value
+    A Sort **Field** refers to the field you sort your Items/Annotations list by. For example, if you sort by filename, you will get the Item list sorted in alphabetical order by filename.
+    
+    You can see the full list of the available fields <a href="https://dataloop.ai/docs/api-dql" target="_blank">here</a>.
+    A Sort **Value** refers to the list order direction that is either ascending or descending.
     ### Filter Annotations
-    Filter annotations by the annotations' JSON fields.
-    In this example, you will get all of the note annotations in the dataset sorted by the label.
-
-    <div style="background-color: lightblue; color: black; width: 50%; padding: 10px; border-radius: 15px 5px 5px 5px;"><b>Note</b><br>
-
-    See all of the items iterator options on the <a href="https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/pagination/chapter.md#iterator-of-items" target="_blank">Iterator of Items</a> page.</div>
-
+    Filter Annotations by the Annotations' JSON fields.
+    In the example below, you will get all of the note Annotations in the Dataset sorted by the Label.
     """
 
 
 def section2():
     """
-
     ### Filter Annotations by the Annotations' Item
-    <code>add_join</code> - filter Annotations by the annotations' items' JSON fields. For example, filter only box annotations from image items.
-    <div style="background-color: lightblue; color: black; width: 50%; padding: 10px; border-radius: 15px 5px 5px 5px;"><b>Note</b><br>
-    See all of the items iterator options on the <a href="https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/pagination/chapter.md#iterator-of-items" target="_blank">Iterator of Items</a> page.</div>
-
+    The 'add_join' function can be used to filter Annotations based on the JSON fields of the Annotation's Items. For example, you can Filter only Box Annotations from image Items.
+   
+    **Note:** See all of the Items iterator options on the <a href="https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/pagination/chapter.md#iterator-of-items" target="_blank">Iterator of Items</a> page.
     """
 
 
 def section3():
     """
-    ### Filters Method - "Or" and "And"
-    <div style="background-color: lightblue; color: black; width: 50%; padding: 10px; border-radius: 15px 5px 5px 5px;"><b>Filters Operators</b><br>
-    For more advanced filters operators visit the <a href="https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/advanced_sdk_filters/chapter.md" target="_blank">Advanced SDK Filters</a> page.</div>
+    ### Filters Method - "OR" and "AND"
+    **Note:** For more advanced Filters operators visit the <a href="https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/advanced_sdk_filters/chapter.md" target="_blank">Advanced SDK Filters</a> page.</div>
     
-    #### And
-    If you wish to filter annotations with the "and" logical operator, you can do so by specifying which filters will be checked with "and".
-    <div style="background-color: lightblue; color: black; width: 50%; padding: 10px; border-radius: 15px 5px 5px 5px;"><b>
-    AND is the default value and can be used without specifying the method.</b></div>
-    In this example, you will get a list of annotations in the dataset of the type <b>box</b> and label <b>car</b>.
-
+    If you wish to filter Annotations with the "AND" logical operator, you can do so by specifying which Filters will be checked with "AND".
+    **Note:** AND is the default value and can be used without specifying the method.
+    In the example below, you will get a list of Annotations in the Dataset of the type <b>box</b> and Label <b>car</b>.
     """
 
 
 def section4():
     """
-    #### Or
-    If you wish to filter annotations with the "or" logical operator, you can do so by specifying which filters will be checked with "or".
-    In this example, you will get a list of the dataset's annotations that are either a 'box' or a 'point' type.
-
+    ### Or
+    If you wish to Filter Annotations with the "OR" logical operator, you can do so by specifying which Filters will be checked with "OR".
+    
+    In the example below, you will get a list of the Dataset's Annotations that are either a 'box' or a 'point' type.
     """
 
 
 def section5():
     """
     ### Delete Filtered Items 
-    In this example, you will delete annotations that were created on 30/8/2020 at 8:17 AM.
-
+    In the example below, you will delete Annotations that were created on 30/8/2020 at 8:17 AM. A Filter will be used that will search for all Annotations that were made at that date and time.
     """
 
 
 def section6():
     """
-    ### Annotation Filtering Fields
-    #### More Filter Options
-    <div style="background-color: lightblue; color: black; width: 50%; padding: 10px; border-radius: 15px 5px 5px 5px;">
-    Use a dot to access parameters within curly brackets.
-    For example use field='metadata.system.status' to filter by the annotation's status.</div>
-
+    ## Annotation Filtering Fields
+    ### More Filter Options
+    
+    You can use a `.` (dot) to access the parameters within curly brackets. For example you can use `field='metadata.system.status'` to Filter by the Annotation's status.
     """
 
 
 def section7():
     """
-    ### Full Examples
-    #### How to filter annotations by their label?
-
+    ### Filter Annotations by their Label
+    In the code below, you can see how Annotations can be Filtered using a particular Label. All you have to do is to change `your_label_value` with the Label you want to search for.
     """
 
 
 def section8():
     """
-    ### Advanced Filtering Operators
-    Explore advanced filtering options on <a href="https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/advanced_sdk_filters/chapter.md" target="_blank">this page</a>.
-
+    ## Advanced Filtering Operators
+    If you want to explore advanced filtering options you can do so on <a href="https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/advanced_sdk_filters/chapter.md" target="_blank">this page</a>.
     """
