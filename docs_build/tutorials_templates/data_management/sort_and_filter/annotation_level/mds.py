@@ -13,7 +13,7 @@ def section1():
     To access the filters entity click <a href="https://sdk-docs.dataloop.ai/en/latest/entities.html#module-dtlpy.entities.filters" target="_blank">here</a>.
     
     ### Filters - Field & Value
-    Filter your Items or Annotations using the parameters in the JSON code that represent its data within our system. Access your annotation JSON using `to_json()`.
+    Filter your Annotations using the parameters in the JSON code that represent its data within our system. Access your annotation JSON using `to_json()`.
     A **Filter Field** refers to the attributes you filter by. For example, "dir" would be used if you wish to filter Item Annotations by their folder/directory.
     
     A **Filter Value** refers to the input by which you want to filter. For example, "/new_folder" can be the directory/folder name where the Item Annotations you wish to filter are located.
