@@ -1,9 +1,17 @@
 def section1():
     """
     # Item Level Filters
+    
+    ## The Dataloop Query Language - DQL
+    Using The <a href="https://dataloop.ai/docs/api-dql" target="_blank">Dataloop Query Language</a>, you may navigate through massive amounts of data with ease. The Dataloop platform gives you different capabilities to organize your data in Datasets, folders, and versioning systems, you still need the ability to query your data. This is where our Dataloop Query Language becomes useful. When using the DQL in the SDK, additional fields such as Sort, Page, and pageSize can be defined to sort the data that is returned from the Query. Every DQL query has the following components:
+    - Resource - The target Resource for the Query; the Resource can be Items or Annotations.
+    - Filter - The Filter includes Attributes and logical operators to filter Items or Annotations.
+    
     ## Filters
-    Using filters, you can filter Items and get a generator of the filtered Items. The Filter entity is used to build such filters.
-
+    Filters are part of the Dataset and Task Browsers, enabling you to Filter Items based on every aspect of your files. When multiple Filters are used, the relationship between them will be the AND logical operator. However, the relationship between multiple values in each Filter will be the OR logical operator.
+    By using Filters, you can filter Items and get a generator of the filtered Items. The Filter entity is used to build such Filters.
+    To access the filters entity click <a href="https://sdk-docs.dataloop.ai/en/latest/entities.html#module-dtlpy.entities.filters" target="_blank">here</a>.
+    
     ### Filters - Field & Value
     You can filter your annotations using the parameters in the JSON code that represent its data within our system. You can also access your item's JSON using <code>to_json()</code>.
 
