@@ -42,7 +42,7 @@ def section3():
 
     **Note:** For more advanced Filter Operators visit the <a href="https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/advanced_sdk_filters/chapter.md" target="_blank">Advanced Python SDK Filters</a> page.</div>
     
-    ### And
+
     If you wish to filter Annotations with the "AND" logical operator, you can do so by specifying which filters will be checked with "AND".
     
     **Note:** The 'AND' is the default value and can be used without specifying the method.
@@ -53,20 +53,19 @@ def section3():
 
 def section4():
     """
-    ### Or
-    If you wish to filter annotations with the "or" logical operator, you can do so by specifying which filters will be checked with "or".
-    In this example, you will get a list of items that are either on "folder1" or "folder2" directories.
+
+    If you wish to filter annotations with the "OR" logical operator, you can do so by specifying which filters will be checked with "OR".
+    In the example below, you will get a list of Items that are either on "folder1" or "folder2" directories.
 
     """
 
 
 def section5():
     """
-    ### Update User Metadata of Filtered Items
-    <b>Update Filtered Items</b> - The 'update_value' must be a dictionary.
-    The dictionary will only update user metadata.
-    Understand more about user metadata <a href=https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/working_with_metadata/chapter.md/" target="_blank">here</a>.
-    In this example, you will update/add user metadata (with the field "BlackDogs" and value True), to items in a specific folder 'dogs' with an attribute 'black'.
+    ### Update The User Metadata of Filtered Items
+    To update filtered Items - The `update_value` must be a dictionary. The dictionary will only update User Metadata. To understand more about user Metadata <a href=https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/working_with_metadata/chapter.md/" target="_blank">click this link</a>.
+    
+    In the example below, you will update/add user Metadata (with the field "BlackDogs" and value True), to Items in a specific folder 'dogs' with an attribute 'black'.
 
     """
 
@@ -74,82 +73,79 @@ def section5():
 def section6():
     """
     ### Delete Filtered Items 
-    In this example, you will delete items that were created on 30/8/2020 at 8:17 AM.
+    Sometimes, you may want to remove the items that were updated in a specific time-frame. In the example below, you will delete all Items that were created on 30/8/2020 at 8:17 AM.
 
     """
 
 
 def section7():
     """
-    ### Item Filtering Fields 
-    #### More Filter Options
-    <div style="background-color: lightblue; color: black; width: 50%; padding: 10px; border-radius: 15px 5px 5px 5px;">
-    Use a dot to access parameters within curly brackets.
-    For example use field='metadata.system.originalname' to filter by the item's original name.</div>
+    ### More Filter Options
+    You can Use a `.` (dot) to access parameters within curly brackets. For example, you could use `field='metadata.system.originalname'` to filter by the Item's original name.</div>
 
     """
 
 
 def section8():
     """
-    ### Full Examples
-    #### How to filter items by their annotations label?
+    ### More Examples
+    The example below shows you how to filter Items by their Annotations Label.
 
     """
 
 
 def section9():
     """
-    #### How to filter items by completed and approved status?
+    The example below shows you how to filter Items by the `completed` and `approved` status.
     """
 
 
 def section10():
     """
-    #### How to filter items by completed status (with items who are approved as well)?
+    The example below shows you how to filter Items by the `completed` status (with Items That are approved as well).
     """
 
 
 def section11():
     """
-    #### How to filter items by only completed status?
+    The example below shows you how to filter Items only by completed status.
     """
 
 
 def section12():
     """
-    #### How to filter unassigned items?
+    The example below shows you how to filter unassigned Items.
     """
 
 
 def section13():
     """
-    #### How to filter items by a specific folder?
+    The example below shows you how to filter Items by a specific folder.
     """
 
 
 def section14():
     """
-    #### Get all items named foo.bar
+    The example below shows you how to Get all Items named `foo.bar`.
     """
 
 
 def section15():
     """
-    #### Sort files of size 0-5 MB by name, in ascending order
+    The example below shows you how to Sort files of size 0-5 MB by name, in ascending order.
     """
 
 
 def section16():
     """
-    #### Sort with multiple fields: Sort Items by labels ascending and createdAt descending
+    The example below shows you how to Sort with multiple fields - Sort Items by Labels in ascending order and by `createdAt` in descending order.
     """
 
 
 def section17():
     """
     ### Advanced Filtering Operators
-    Explore advanced filtering options on <a href="https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/advanced_sdk_filters/chapter.md/" target="_blank">this page</a>.
+    You can explore more advanced filtering options on <a href="https://github.com/dataloop-ai/dtlpy-documentation/blob/main/tutorials/data_management/sort_and_filter/advanced_sdk_filters/chapter.md/" target="_blank">this page</a>.
 
     ### Response to DQL Query
     A typical response to a DQL query will look like the following:
@@ -158,5 +154,5 @@ def section17():
 def section18():
     """
     ### Using Custom DQL Filter
-    If you have a DQL JSON copied from the platform you can create an SDK Filter directly with it using the "custom_filter" attribute:
+    If you have a DQL JSON copied from the platform you can create an Filter directly in the SDK with it, using the "custom_filter" attribute:
     """
