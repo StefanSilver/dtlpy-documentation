@@ -1,7 +1,7 @@
 def section1():
     """
-    
-    # The Dataloop Query Language - DQL
+    # Annotation level Filters
+    ## The Dataloop Query Language - DQL
     Using The <a href="https://dataloop.ai/docs/api-dql" target="_blank">Dataloop Query Language</a>, you may navigate through massive amounts of data. The Dataloop platform gives you different capabilities to organize your data in Datasets, folders, and versioning systems, you still need the ability to query your data. This is where our Dataloop Query Language becomes useful. When using the DQL in the SDK, additional fields such as Sort, Page, and pageSize can be defined to sort the data that is returned from the Query. Every DQL query has the following components:
     - Resource - The target Resource for the Query; the Resource can be Items or Annotations.
     - Filter - The Filter includes Attributes and logical operators to filter Items.
