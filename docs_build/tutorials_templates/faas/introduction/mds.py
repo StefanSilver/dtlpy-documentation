@@ -21,7 +21,7 @@ def func1():
 
 def func2():
     """
-    Your browser will open a login screen, allowing you to enter your credentials or log in with Google. Once the "Login Successful" tab appears, you can to close itand return to your console or IDE.
+    Your browser will open a login screen, allowing you to enter your credentials or log in with Google. Once the "Login Successful" tab appears, you can to close it and return to your console or IDE.
 
     This tutorial requires you to have already created a Project. You can create a new project ([click here to learn more about Projects](https://github.com/dataloop-ai/dtlpy-documentation/blob/main/onboarding/02_login_and_project_and_dataset_creation.md)), or alternatively use an existing one: 
     """
