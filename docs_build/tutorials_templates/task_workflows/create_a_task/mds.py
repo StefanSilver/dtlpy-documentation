@@ -11,14 +11,14 @@ def func1():
 
 def func2():
     """
-    ## List of Items
+    ### List of Items
     The example below will show you how to create a Task from a list of Items. The Items will be divided equally between 2 Annotators specified, as Assignments.
     """
 
 
 def func3():
     """
-    ## Entire Dataset
+    ### Entire Dataset
     The following example will create a Task from all of the Items in a Dataset. The Items will be divided equally between the 2 Annotators, as Assignments.
     """
 
@@ -28,18 +28,18 @@ def func4():
     ## Add Items to an existing Task
     This example of adding Items to an existing Task will create new Assignments (for new assignee/s).
 
-    ## By Filters
+    ### By Filters
     In the example below you can add new Items to be Annotated or to perform QA on, to existing Tasks, by using a Filter.
     """
 
 
 def func5():
     """
-    ## Single Item
+    ### Single Item
     """
 
 
 def func6():
     """
-    ## List of Items
+    ### List of Items
     """
