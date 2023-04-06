@@ -24,7 +24,7 @@
             "location": "faas/multiple_functions_and_modules/chapter.md"
         },
         {
-            "displayName": "Advance Guides",
+            "displayName": "Advanced Guides",
             "description": "Learn more about the options of the services and executions",
             "location": "faas/advance/chapter.md"
         },
