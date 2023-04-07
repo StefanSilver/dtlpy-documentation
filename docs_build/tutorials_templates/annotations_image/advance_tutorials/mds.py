@@ -36,10 +36,9 @@ def section4():
 def section5():
     """
     ## Parenting Annotations
-
-    Parenting establishes a relation between 2 annotations, executed by setting the parent_id parameter. The Dataloop system will reject an attempt to set circular parenting.
-    The following script demonstrate setting parenting relation while uploading/creating annotations
-
+    Parenting in image Annotations refers to the process of grouping related objects or elements within an image together. It involves creating a hierarchical relationship between the objects where one object is considered the "parent" and others are considered "children".
+    
+    In Dataloop, parenting establishes a relation between 2 Annotations, executed by setting the `parent_id `parameter. The Dataloop system will reject any attempt to set circular parenting. The following script demonstrates how to set the parenting relation while uploading/creating Annotations.
 
     """
 
@@ -47,7 +46,7 @@ def section5():
 def section6():
     """
 
-    The following script demonstrate setting parenting relation on existing annotations:
+    The following script demonstrates how to set a parenting relation on existing Annotations. It defines a "parent" Annotation with a Bounding Box and Label, uploads it. Then creates a "child" Annotation with a Bounding Box and Label, uploads it. The it sets its parent ID to the ID of the parent Annotation. Finally, it updates the child Annotation with system Metadata to establish the parent-child relationship.
     """
 
 
@@ -55,6 +54,6 @@ def section7():
     """
 
     ## Change Annotations’ Label
-    The following example creates a new label in the recipe (an optional step, you can also use an existing label), then applies it to all annotations in a certain filter.
+    The following example creates a new Label in the Recipe (an optional step, you can also use an existing Label), then applies it to all Annotations in a certain Filter.
 
     """
