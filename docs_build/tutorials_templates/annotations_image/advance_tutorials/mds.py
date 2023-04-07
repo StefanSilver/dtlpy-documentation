@@ -1,16 +1,17 @@
 def section1():
     """
-    # Advance Tutorials
+    # Advanced Tutorials
+    This section will provide more advanced scripts that can be used in Dataloop to perform different processes on image Annotations.
     ## Copy Annotations Between Items
-    By setting annotations entity from one item, and uploading it into another, we can copy annotations between items. Running through all items in a filter allows us to copy from one item into multiple items, for example video snapshots with the same object.
-
+    We can copy Annotations between Items by setting the Annotations entity from one Item and uploading it to another. Running a Filter through all Items allows us to copy from one Item into multiple Items, such as video snapshots with the same object.
     """
 
 
 def section2():
     """
     ## Show Images & Annotations
-    This script uses module CV2, please use this page to install it.
+    This code downloads an image and its Annotations from a Dataset, displays the Annotations and the image separately, and then displays the Annotated image with the Annotations pasted onto it.
+    **Note:** This script uses  Pillow and CV2, please make sure they are installed (`pip install opencv-python` and `pip install --upgrade Pillow`).
 
     """
 
@@ -18,8 +19,8 @@ def section2():
 def section3():
     """
     ## Show Annotations from JSON file (Dataloop format)
-
-    Please notice that directory paths look different in OS and Linux and does not require "r" at the beginning
+    This code reads Annotation data from a JSON file in Dataloop format, generates an image mask for each Annotation, and displays the mask image for visualization purposes.
+    **Note:** Directory paths look different in MacOS and Linux when compared to Windows. MacOS and Linux don'trequire "r" at the beginning of the filepath.
 
 
     """
@@ -28,7 +29,7 @@ def section3():
 def section4():
     """
     ## Count total number of annotations
-    The following script counts the number of annotations in a filter. The filter can be set to any context - Dataset, folder or any specific criteria. In the following example, it is set to a dataset.
+    The following script counts the number of Annotations with a Filter. The Filter can be set to any context - Dataset, folder or other criteria. In the following example, it is set to a Dataset.
     """
 
 
