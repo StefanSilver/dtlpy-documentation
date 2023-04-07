@@ -5,7 +5,7 @@ def section1():
     
     ## Init Segmentation
     
-    Init segmentation, also known as initial segmentation, is a fundamental process in image processing and computer vision. It involves dividing an image into different regions or segments based on some initial criteria or features. The segmentation process is usually a precursor step to more advanced image analysis tasks such as object detection, image recognition, and scene understanding.
+    Init segmentation, also known as initial segmentation, is a  image processing and computer vision technique. It involves dividing an image into different regions or segments based on some initial criteria or features. The segmentation process is usually a precursor step to more advanced image analysis tasks such as object detection, image recognition, and scene understanding.
 
     The initial criteria used for segmentation can vary depending on the specific application or problem being addressed. For instance, in a medical image, the segmentation may be based on the differences in intensity between different types of tissue. In a natural scene, the segmentation may be based on color, texture, or edge information. In some cases, a combination of features may be used to achieve better segmentation results.
     
@@ -26,8 +26,7 @@ def section2():
 def section3():
     """
     ## Convert Mask to Polygon
-    The Dataloop Python SDK includes a function that can be used to convert a semantic mask to a Polygon Annotation, which is often easier to edit and work with in the Web UI version of Dataloop.
-    The following example filters for Items that have semantic mask Annotations, and automatically converts them into Polygon Annotations.
+    The Dataloop Python SDK includes a function that can be used to convert a semantic mask to a Polygon Annotation, which is often easier to edit and work with in the Web UI version of Dataloop. The following example filters for Items that have semantic mask Annotations, and automatically converts them into Polygon Annotations.
 
     """
 
@@ -35,9 +34,8 @@ def section3():
 def section4():
     """
     ## Convert Polygon to Mask
-    The Dataloop SDK also includes a function to convert a Polygon annotation into semantic mask annotation.
-    The following example filters for items with Polygon annotations, and converts them into semantic mask annotations.
-    This script uses module CV2, please make sure it is installed.
+    The Dataloop Python SDK also includes a function to convert a Polygon Annotation into semantic mask Annotation. The following example filters for Items with Polygon Annotations, and converts them into semantic mask Annotations.
+    **Note:** This script uses the CV2 module, please make sure it is installed (`pip install opencv-python`).
 
 
 
@@ -47,10 +45,9 @@ def section4():
 def section5():
     """
     ## Create Semantic Segmentation from Image Mask and Upload
-    The following script creates a semantic mask based on RGB colors of an image item and upload them to the Dataloop platform
-    Please notice that directory paths look different in OS and Linux and does not require "r" at the beginning
-    Make sure to use install OpenCV package to version 3.4.8.x with the script
-    **pip install opencv-python == 3 .4.8.latest**
+    The following script creates a semantic mask based on RGB colors of an image Item and uploads them to the Dataloop platform. Please notice that directory paths look different in Windows, compared to MacOS and Linux. The MacOS and Linux doesn't require "r" at the beginning of the filepath.
+    ***Note*** Make sure install OpenCV package of version 3.4.8.x for the script to work properly (`pip install opencv-python == 3.4.8.latest`).
+    
 
 
     """
