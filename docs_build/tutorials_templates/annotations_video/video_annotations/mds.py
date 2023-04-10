@@ -20,8 +20,8 @@ def section1():
 def section2():
     """
     ## Create A Single annotation
-    This code creates a single neewnnotation object for a video item, spans the annotation over 100 frames, and adds a box to each frame with specific coordinates and a label. Finally, it uploads the annotation to a platform.
-    Create a  Annotation for a video Item and upload it
+    This code creates a single new Annotation object for the video Item, spans the Annotation over 100 frames, and adds a box to each frame with specific coordinates and an attached Label. Finally, it uploads the Annotation to the Dataloop platform.
+
 
     """
 
@@ -29,7 +29,7 @@ def section2():
 def section3():
     """
     ## Adding Multiple Annotations Using Annotation Builder
-
+    This code creates a new Annotation builder for a video Item, and spans the Annotation over 100 frames, and adds 10 box Annotations to each frame with specific coordinates and a Label. The `object_id` parameter is used to connect the Annotations of each object in different frames. Finally, it uploads the Annotations to the platform on the spicific video Item it was used on.
     The following scripts demonstrate adding 10 annotations into each frame
 
     """
@@ -38,8 +38,7 @@ def section3():
 def section4():
     """
     ## Read Frames of an Annotation
-    The following example reads all the frames an annotation exist in, e.g. the frame range an annotation spans over.
-
+    The code below reads all the frames an Annotation exist in, e.g. the frame range an Annotation spans over. It also prints the bounding box coordinates of the Annotation in each frame.
     """
 
 
@@ -47,8 +46,7 @@ def section5():
     """
     ## Create Frame Snapshots from Video
 
-    One of Dataloop video utilities enables creating a frame snapshot from a video item every X frames (frame_interval).
-    You will need FFmpeg needs to be installed on your system using <a href="https://ffmpeg.org/download.html" target="_blank">this official website</a>.
+    One of Dataloop's video utilities enables creating a frame snapshot from a video Item every `x` frames (`frame_interval`). You need [FFmpeg](https://ffmpeg.org/) to be installed on your system.
 
     """
 
@@ -57,7 +55,7 @@ def section6():
     """
 
     ## Play An Item In Video Player
-    Play a video item with its annotations and labels with a video player
+    Using the code below, you can play a video Item with its attached Annotations and Labels in a video player.
 
     """
 
@@ -66,5 +64,5 @@ def section7():
     """
 
     ## Show Annotations in a Specified Frame
-
+    This code imports the `matplotlib` Python library for plotting and visualization purposes. It then retrieves a list of Annotations for the video Item from the platform and selects the Annotations for a specific frame (number 55). It plots the bounding boxes of the Annotations on top of the corresponding frame using the `imshow()` method from matplotlib. Finally, it uses the `video_player()` method from the Dataloop platform to play the video.
     """
