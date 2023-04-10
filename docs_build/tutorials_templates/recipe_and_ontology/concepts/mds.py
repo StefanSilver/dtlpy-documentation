@@ -4,9 +4,7 @@ def section1():
     
     Dataloop’s Recipe builder provides data scientists with the flexibility of creating the Ontology they need for supporting their data-centric approach to managing data annotation Tasks.
     
-    A Recipe is composed of two main components: the Ontology and instructions (or data Recipe). Let’s start with the data Recipe.
-
-    The data Recipe is the human-readable instruction that explains to the data Annotator how to annotate the data. The more expert your AI becomes, the more important your Recipe will become.
+    A Recipe in Dataloop is composed of two main components: the Ontology and instructions (or data Recipe). The data Recipe is the human-readable instruction that explains to the data Annotator how to annotate the data. The more expert your AI becomes, the more important your Recipe will become.
 
     A Recipe has 3 main roles:
     - To create a frictionless labeling instruction medium.
