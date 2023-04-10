@@ -5,12 +5,12 @@ def func1():
     Models can be trained offline (i.e. locally, without connecting the model to the platform) with only model metrics being uploaded to the Dataloop platform for versioning and comparisons.  This tutorial will walk you through how to upload metrics from model training via the SDK.
 
     The Dataloop entities required are:
-     - package
-     - codebase reference
-     - model (with a valid dataset ID)
+     - Package
+     - Codebase reference
+     - Model (with a valid Dataset ID)
 
     ### Create Dataloop entities
-    First you need to create a dummy package, a dummy codebase reference, and a model with a valid dataset ID. The code below shows how to do this, and remember to replace <project_name> and <dataset_id> with the appropriate strings to reference your project and dataset.
+    Before starting, you need to create a dummy Package, a dummy Codebase reference, and a model with a valid Dataset ID. The code below shows how to do this, and remember to replace <project_name> and <dataset_id> with the appropriate strings to reference your project and dataset.
 
     """
 
