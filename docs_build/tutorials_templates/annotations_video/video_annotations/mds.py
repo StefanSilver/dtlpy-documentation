@@ -1,13 +1,13 @@
 def section1():
     """
     # Video Annotations
-    or annotating video data with metadata that can be used to train and improve deep learning models. Video annotations are critical for many applications of deep learning, such as object detection, action recognition, and scene understanding.
+    In the context of deep learning, video annotations refer to the process of manually labeling or annotating video data with metadata that can be used to train and improve deep learning models. Video annotations are critical for many applications of deep learning, such as object detection, action recognition, and scene understanding.
 
     One common method of video annotation in deep learning is to use bounding boxes to identify objects within the video frames. For example, if the goal is to train a deep learning model to recognize cars in video footage, annotators would manually draw bounding boxes around the cars in each frame of the video. These annotations can then be used to train a deep learning model to recognize cars and classify them correctly.
 
     Other types of video annotations used in deep learning include segmentation, where each pixel in a video frame is labeled with a corresponding object or region, and keypoint annotation, where specific points on an object or person within the video are labeled.
 
-    The accuracy and quality of video annotations are critical to the success of deep learning models trained on video data. In recent years, there has been a growing interest in developing automated video annotation techniques that can reduce the need for manual annotation and improve the efficiency and scalability of deep learning applications.
+    The accuracy and quality of video annotations are critical to the success of deep learning models trained on video data, so Dataloop also offers the tools necessary to annotate video data. 
     
     In this tutorial we will create and upload Annotations into a video Item. Video Annotations differ from image Annotations since they span over multiple frames.
     **Note:** The scripts in this tutorial use the CV2 module, please <a href="https://pypi.org/project/opencv-python/" target="_blank">usethis page to install it</a>.
