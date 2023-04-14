@@ -1,55 +1,53 @@
 # Debug Applications (Development stage)
 
-Debug apps are applications used in the Platform, that are still in their initial stages of development.
-They allow developers to identify and resolve bugs, errors, and other technical issues that may arise during the
-development process.
-By using debug apps, developers can ensure that their applications are functioning as expected and provide a smooth and
-seamless user experience.
+Debug Applications are Applications used in the Dataloop Platform, that are still in their initial stages of development. They are used to allow developers to identify and resolve bugs, errors, and other technical issues that may arise during the development process. By using Debug Applications feature, developers can ensure that their applications are functioning as expected and provide a smooth and seamless user experience.
 
-_- Used for applications that have panels (UI)_.
+**Note:** Used for Applications that have Panels (UI).
 
-### Basic requirements
-
-- For working on dev/local environment, you will need to add `local.dataloop.ai` to your hosts file.
+## Basic requirements
+To use the Debug Application feature, you need several things:
+- For working on `dev/local` environment, you will need to add `local.dataloop.ai` to your hosts file.
     - Open your hosts file with admin/sudo privileges. This is normally in `/etc/hosts` on
       Linux, `C:\Windows\System32\drivers\etc\hosts` on Windows. Add this line to the end of the
-      file: `127.0.0.1 local.dataloop.ai`
-    - You might also need to run your app in _https_ mode.
-- You may need to enable [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) on your app.
-- Your app should be up running in the browser.
-- Your app should have a `dataloop.json` file that stimulates an installed app entity - it needs to be publicly served
-  under the app's main address (For example: https://local.dataloop.ai:3000/dataloop.json).
-- You're going to need a working, functioning Dataloop Platform user with a **Developer** role.
-- You're going to need to be familiar with our [Javascript SDK](../../index.md)
+      file: `127.0.0.1 local.dataloop.ai`.
+    - You might also need to run your Application in `_https_` mode.
+- You may need to enable [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) on your Application.
+- Your Application should be up running in the browser.
+- Your Application should have a `dataloop.json` file that simulates an installed Application entity. It needs to be publicly served
+  under the Application's main address (For example: https://local.dataloop.ai:3000/dataloop.json).
+- You're going to need a working, functioning Dataloop Platform user having the **Developer** role.
+- You need to be familiar with our [Javascript SDK](../../index.md).
 
-### How to add a debug app in the Dataloop Platform
-
-- On the left sidebar menu, go to **Application Hub** under the **Application (FAAS)** section, and open the **
-  Developer** tab.
+## Add a Debug Application in the Dataloop Platform
+After you have fulfilled the previous requirements, you can add a Debug Application in Dataloop:
+- On the left sidebar menu, go to **Application Hub** under the **Application (FAAS)** section, and open the **Developer** tab.
+  
   ![img.png](../../../assets/apps/img.png)
+  
 - Click the **Add Function** button.
-- Fill out the name of the app, choose a main slot and add your application's URL address
-    - (For example: https://local.dataloop.ai:3000)
+- Fill out the name of the app, choose a main slot and add your application's URL address (for example: https://local.dataloop.ai:3000).
+
       ![img_1.png](../../../assets/apps/img_1.png)
-- Press the **Create** button, and wallah! You have a debug app in the Platform.
+
+- Press the **Create** button and you should  have a Debug Application added in the Platform.
+
   ![img_2.png](../../../assets/apps/img_2.png)
-- Go to the dataset browser, right-click on an item, _Open With..._ and choose your
-  app! <br /><p><img src="../../../assets/apps/img_3.png"><br /></p>
 
-### Tests
+- Go to the Dataset browser, right-click on an Item, *Open With...* and choose your app! 
 
-In order to run tests locally, you must mock the `dl` xFrame Driver and provide it with mock data. We created
-a `DlMockDriver` and a **Debug Snapshot** shortcut exactly for that!
+<br /><p><img src="../../../assets/apps/img_3.png"><br /></p>
 
-- The `DlMockDriver` is a mock driver that simulates the `dl` xFrame Driver, and is used for testing applications
-  locally.
+## Tests
+
+In order to run tests locally, you must mock the `dl` xFrame Driver and provide it with mock data. We created a `DlMockDriver` and a **Debug Snapshot** shortcut exactly for that!
+
+- The `DlMockDriver` is a mock driver that simulates the `dl` xFrame Driver, and is used for testing applications locally.
     - You can mock the `window.dl` during testing by assigning a new instance of `DlMockDriver` to `global.window.dl`,
       effectively overriding its original value.
 
-* In order to get the mock data for the mock driver, you can use the **Debug Snapshot** feature.
-    - [Add a debug app to the Platform](index.md#How to add a debug app in the Dataloop Platform).
-    - Press the **Debug Snapshot** icon at the top bar (or **Alt+Shift+S**) in order to download the generated
-      snapshot file.
+In order to get the mock data for the mock driver, you can use the **Debug Snapshot** feature:
+    - [Add a Debug Application to the Platform](index.md#How to add a debug app in the Dataloop Platform).
+    - Press the **Debug Snapshot** icon at the top bar (or **Alt+Shift+S**) in order to download the generated snapshot file.
     - Place the file in your tests directory.
     - Require the snapshot file in your test file, and use it to create a new instance of `DlMockDriver`.
 
@@ -64,10 +62,9 @@ global.window.dl = new DlMockDriver(data)
 
 ### Item Viewer Example
 
-Here is an example of a basic Item Viewer App written in html & javascript
-_(We trust that you're better than us and can write better code than this using something like React/Vue etc.)_
+Here is an example of a basic Item Viewer Application written in HTML & javascript (*We trust that you're better than us and can write better code than this using something like React/Vue etc.*).
 
-_This following item viewer example supports images only._
+**Note:** This following Item viewer example supports images only.
 
 `index.html`
 
@@ -238,6 +235,5 @@ _This following item viewer example supports images only._
 ```
 
 - You may play with the slot's `layout` to hide/show the different bars.
-- The `conditions` section is used to define the app's supported items. In this example, we only support images.
-- You can find the full example (including how to publish and install the
-  app) [here](https://github.com/dataloop-ai-apps/item-viewer)!
+- The `conditions` section is used to define the Application's supported items. In this example, we only support images.
+- You can find the full example (including how to publish and install the Application) [here](https://github.com/dataloop-ai-apps/item-viewer)!
