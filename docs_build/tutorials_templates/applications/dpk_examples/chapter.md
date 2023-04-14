@@ -1,8 +1,10 @@
 # Dataloop JSON Examples
 
-* Examples for a `dataloop.json` file for developing stages ([Debug Applications](./index.md)).
+This section provides you various examples for a `dataloop.json` file for developing stages ([Debug Applications](./index.md)).
 
-### Floating Window
+## Floating Window
+
+The code below defines a component called "reference-viewer" in JSON format. The component has a supported slot of "floatingWindow" type and a configuration object with properties for width, height, resizeable, and background color. There are no specific resource requirements or dependencies specified in the component's conditions object. 
 
 ```json
 {
@@ -33,7 +35,7 @@
 ```
 
 ### Item Viewer
-
+This is a JSON code block that defines a component called "item-viewer". It specifies that the component supports a single slot of type "itemViewer" with a specific configuration for layout. It also sets conditions for when this component can be used, specifically when the resources being viewed are items with a mimetype of "image/*".
 ```json
 
 {
@@ -70,7 +72,7 @@
 ```
 
 ### Pipeline Node
-
+This is a JSON code block that defines a pipeline system with custom nodes. It includes a pipeline node panel with a single pipeline node config slot, a custom pipeline node called `data_split` that belongs to the "data" category, and a `custom_nodes` module with two functions: `data_split` and `test`.
 ```json
 {
   "components": {
@@ -141,7 +143,8 @@
 
 ### Toolbars
 
-* *Invoke a panel or a function in an application*
+This is a JSON code block that defines a dialog panel component with a single dialog slot that has a specific layout configuration. It also defines two toolbars, one to invoke the dialog panel and the other to invoke a custom function called `my_function` belonging to the `my_module` module. The `my_function` takes an Item as input and als outputs an Item. You can use this code to Invoke a panel or a function in an Application.
+
 
 ```json
 {
