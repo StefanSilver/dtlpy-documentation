@@ -2,9 +2,9 @@
 
 ### Uploading Data Samples
 
-If you followed the onboarding tutorial so far, you should have created a Project and Dataset and selected that Dataset to work with. This means you are now ready to add data samples to your Dataset and then learn how to annotate them.
+If you followed the onboarding tutorial so far, you should have created a Project and Dataset and selected that Dataset to work with. This means you are now ready to add data samples (Items) to your Dataset and then learn how to Annotate them.
 
-Data samples you upload to your dataset will be stored as something called an Item. Items are Dataloop objects belonging to the Dataloop Item class. They are represented as a Dataloop data model object and are stored as a binary object along with a JSON file that contains metadata about the Item. Item JSON files also contain metadata from annotations, for example, that you add to further describe or classify the data sample. Each Item has a `stream` method to get the data sample along with other attributes, such as the metadata, from the accompanying JSON file.
+The Data samples you upload to your Dataset will be stored as something called an Item. Items are Dataloop objects belonging to the Dataloop Item class. They are represented as a Dataloop data model object and are stored as a binary object along with a JSON file that contains Metadata about the Item. Item JSON files also contain Metadata from Annotations, for example, that you add to further describe or classify the data sample. Each Item has a `stream` method to get the data sample along with other attributes, such as the Metadata, from the accompanying JSON file.
 
 To get going, create a local directory on your computer where you will place your data sample files. If you are on Windows, for example, you can create a folder `C:\UploadDemo`. Now place an image file in that folder (any `.jpg` image you have laying around will do). Rename the file `test1.jpg` so the rest of the following steps will work as written. Now you can upload that sample to the Dataset we created in the last chapter, using the following command:
 
@@ -85,7 +85,7 @@ For the best results, I suggest you upload multiple items before using the comma
 
 ### Annotating Items
 
-Dataset Items are annotated using Labels. A Label is composed of various Label Settings and Instructions that are defined by a Dataset’s [Recipe](https://dataloop.ai/blog/data-recipes/). For example, an Item can contain 1 Label defined as a Classification, to categorize the entire data sample. It can also contain multiple annotation labels covering only parts of your data sample to identify specific sections of that Item.  For example, if the Item contains cats and dogs, you might find a label for Cat and a label for Dog in the Recipe.
+Dataset Items are annotated using Labels. A Label is composed of various Label Settings and Instructions that are defined by a Dataset’s [Recipe](https://dataloop.ai/blog/data-recipes/). For example, an Item can contain 1 Label defined as a Classification, to categorize the entire data sample. It can also contain multiple annotation Labels covering only parts of your data sample to identify specific sections of that Item.  For example, if the Item contains cats and dogs, you might find a Label for Cat and a Label for Dog in the Recipe.
 
 #### Classification
 
