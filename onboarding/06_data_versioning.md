@@ -9,9 +9,29 @@ Dataloop provides data [versioning tools](https://dataloop.ai/docs/clone-merge-d
 3. Experimentation;
 4. Task and Assignment management.
 
-To get started with Data Versioning, you must first `get` the Dataset you want to version.
+To get started with Data Versioning, you must first `get` the Dataset you want to version. To do that, you need to select the Project you want to use and `Get` it in a variable. To see all of the Projects you have, use the following line:
+```python
+dl.projects.list()
+```
+To which you will get an output similar to this:
+```python
+[Project(created_at=1676027918381, creator='email@gmail.com', id='4c74c1b5-e9cb-4294-b9d5-cbfa13eda242', name='CreatureHunt', feature_constraints=[{'name': 'downloadJsons', 'quota': 1, 'title': 'Download Annotation as Json'}, {'name': 'createGPUService', 'quota': 1, 'title': 'Create GPU service'}, {'name': 'createIntegration', 'quota': 1, 'title': 'Create Integrations'}, {'name': 'createDriver', 'quota': 1, 'title': 'Create Driver'}])]
+```
+Then you need to use the line below, changing the name of the Project with your own Project's name:
+```python
+project = dl.projects.get(project_name='CreatureHunt')
+```
+You can then list all of the Datasets that are part of the Project you selected, using:
+```python
+project.datasets.list()
+```
+To which you will get an output looking like this:
+```python
+[Dataset(id='63e6280e6a656962930ec4b9', url='https://gate.dataloop.ai/api/v1/datasets/63e6280e6a656962930ec4b9', name='Binaries', creator='email@gmail.com', items_count=0, expiration_options=None, index_driver='v1', created_at='2023-02-10T11:18:38.717Z'),
+ Dataset(id='63e6283b4a03c631b54725ec', url='https://gate.dataloop.ai/api/v1/datasets/63e6283b4a03c631b54725ec', name='Creatures', creator='email@gmail.com', items_count=1132, expiration_options=None, index_driver='v1', created_at='2023-02-10T11:19:23.239Z')]
+```
 
-We already did this in the Dataset creation chapter.  As a reminder, this is how you `get` a Dataset you previously created:
+After that, you can `get` the Dataset you want (change `<dataset_id>` with your Dataset's name) using:
 
 ```python
 dataset = project.datasets.get(dataset_id='<dataset_id>')
