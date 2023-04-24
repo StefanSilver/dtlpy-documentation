@@ -2,17 +2,17 @@
 
 The [Dataloop](https://dataloop.ai) platform allows you to manage unstructured data (pictures, video files, audio files, etc.) and annotate it using various annotation tools (box, polygon, classification etc). Annotation work is divided into tasks that include annotation and QA tasks.  QA tasks allow for quality assurance validation of the annotations by raising issues and requesting fixes from the original annotator. Dataloop automations enable you to run your own or public code packages as services running on the Dataloop platform that can take advantage of various types of compute nodes including GPU backed compute nodes. To achieve any data-dependent artificial inteligence (AI) training or production goals, Dataloop pipelines allow you to combine services (compute) with people (in tasks) and models (for example, pre-annotation) to generate the outcomes you expect.
 
-[Click here](https://dataloop.ai/docs/dataloop-overview) if you want to read a full overview of what our platform can do for you!
+[Click here](https://dataloop.ai/docs) if you want to read a full overview of what our platform can do for you!
 
 ## Platform vs Software Development Kit (SDK)
 
-There are 3 ways in which you can use Dataloop: online platform,[ API ](https://gate.dataloop.ai/api/v1/docs) or Python SDK (code).
+There are 3 ways in which you can use Dataloop: [online platform](https://console.dataloop.ai/welcome),[ API ](https://gate.dataloop.ai/api/v1/docs) or [Python SDK (code)](https://developers.dataloop.ai/tutorials/getting_started/sdk_overview/chapter/).
 
 This documentation and onboarding is focused on the Dataloop Python SDK. It teaches you how to do everything using Python code and basic Python tools to interact with the Dataloop platform.
 
 If you want to try our online platform, you can [use this documentation to get started](https://dataloop.ai/docs/welcome).
 
-If you are interested in our API, you can [find out more here](https://dataloop.ai/docs/api).
+If you are interested in our API, you can [find out more here](https://github.com/dataloop-ai-apps/dataloop-api-documentation).
 
 If you are interested in using the Dataloop Python SDK, you are in the right place!
 
