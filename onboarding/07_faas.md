@@ -96,7 +96,7 @@ item.open_in_web()
 
 That's it for the FaaS Onboarding. If you want to find out more about FaaS and how to use it in more advanced ways, here are some useful links:
 
-1. [Dataloop's FaaS general documentation](https://dataloop.ai/docs/faas);
+1. [Dataloop's FaaS general documentation](https://dataloop.ai/docs/faas-overview);
 2. [Dataloop's Python SDK-focused FaaS documentation](https://developers.dataloop.ai/tutorials/faas/);
 3. [Loading FaaS function in the Web-UI and using triggers to execute it](https://github.com/dataloop-ai-apps/load-faas-via-web-ui);
 4. [Python SDK Cheat-Sheet Section](https://dataloop.ai/docs/sdk-cheatsheet)
