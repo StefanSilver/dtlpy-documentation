@@ -76,7 +76,7 @@ dataset = project.datasets.get(dataset_name='Creatures')
 filters = dl.Filters(field='<annotated>', values=False)
 # Create annotation task with filters
 task = dataset.tasks.create(
-    task_name='<task_name>',
+    task_name='test_task_no1',
     due_date=datetime.datetime(day=1, month=1, year=2029).timestamp(),
     assignee_ids=['<annotator1@dataloop.ai>', '<annotator2@dataloop.ai>'],
     # The items will be divided equally between assignments
