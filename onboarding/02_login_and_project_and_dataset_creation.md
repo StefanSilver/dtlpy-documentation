@@ -10,7 +10,7 @@ Once you do that, we can go on and try to log in to the platform using the Pytho
 
 **Before you get started**:  Please note that all of these examples are proven to work when you are using the console or your IDE is running on your local machine.  If you're using an isolated environment on your local machine (for example, Jupyter Notebook running in a Docker Container), things like the Login browser instantiation might not work.  The login call needs to pass cleanly from the console or IDE directly to the browser.  Isolated environments might not successfully make that round-trip call.
 
-When you are ready to write Python code in the IDE of your choice, you can use the following lines of code to log in to the platform:\
+When you are ready to write Python code in the IDE of your choice, you can use the following lines of code to log in to the platform:
 
 
 ```python
