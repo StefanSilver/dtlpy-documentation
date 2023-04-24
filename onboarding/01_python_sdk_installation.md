@@ -12,7 +12,7 @@ The Dataloop platform is built upon an extensive Python SDK that provides full c
 * Annotations
 * Metadata
 
-Note - In this Onboarding, everything will be formatted in a specific way, as specified below:
+**Note** - In this Onboarding, everything will be formatted in a specific way, as specified below:
 
 * Dataloop, Python, Dataset, Items, etc.
   * Keywords that related to Dataloop entities you'll see and use in the Dataloop UI are always capitalized; same in this onboarding.
@@ -49,13 +49,13 @@ Or, if this doesn't work, you can do:
 python3 --version
 ```
 
-You can also use [Anaconda](https://www.anaconda.com/) to install both Python and the Dataloop SDK. Anaconda will give you many useful tools that will help you along the way, and a console that works similarly on Windows, Linux and MacOS.
+You can also use [Anaconda](https://www.anaconda.com/) to install both Python and the Dataloop Python SDK. Anaconda will give you many useful tools that will help you along the way, and a console that works similarly on Windows, Linux and MacOS.
 
 Once you make sure your Python version is 3.6 or greater, you can move to the next step.
 
 #### 2. Install Dataloop Python SDK
 
-The package installer for Python is called `pip`. To install Dataloop's Python SDK package you need to have pip installed on your system. If you installed Python correctly, be it from python.org or by using Anaconda, `pip` should already be installed.
+The package installer for Python is called `pip`. To install Dataloop's Python SDK package you need to have `pip` installed on your system. If you installed Python correctly, be it from python.org or by using Anaconda, `pip` should already be installed.
 
 To make sure that `pip` is installed you can run the following command:
 
