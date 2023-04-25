@@ -17,6 +17,7 @@ First, let's create a new Pipeline:
 pipeline = project.pipelines.create(name='My-First-Pipeline')
 
 ```
+**Note:** You need to have a Project created and `Get` it in the `project` variable (e.g. `project = dl.projects.get(project_name='CreatureHunt')`).
 
 You have now defined a new Pipeline called "My-First-Pipeline". To see the details of this new Pipeline, you can simply `print` them:
 
@@ -42,13 +43,21 @@ Next, you will use a line of code which will execute the Pipeline and return an 
 pipeline_execution= project.pipelines.execute(pipeline='pipeline_entity', execution_input= {'item': 'item_id'} )
 ```
 
-To get the ID for an Item, Dataset, or Pipeline you can simply `print` it like this (using Item as an example):
+**Note:** To get the ID for an Item, you can do for e.g. `dataset = project.datasets.get(dataset_name='Creatures')`, to get the Dataset you want to use and then `dataset.open_in_web()` to open the dataset in the WebUI. After that, go (on the left-side of the screen) to Data Management -> Datasets -> Double-click your Dataset. That will open all of the Items in that Dataset, which you will be able to click and see the ID for that Item:
+![image](https://user-images.githubusercontent.com/58508793/234230717-d9298f4b-3519-4946-a6df-9efaf7eac057.png)
+
+
+
+
+To get all of the details about an Item, Dataset, or Pipeline you can simply `print` it like this (using Item as an example):
 
 ```python
-print(item_1)
+item_2_print = dataset.items.get(item_id=<my_item_id>) #for e.g. 63eb694cbb4d8455ed878717
+print(item_2_print)
 ```
 
-In the example above, you printed the Item details of a Dataset sample file you defined in a previous chapter.  Assuming you followed all chapters and completed coding examples along the way this is how the output should look like (with ID and other details):
+
+In the example above, we printed the Item details of a Dataset Item.  This is how the output should look like (with ID and other details):
 
 ```python
 Item(dataset_url='https://gate.dataloop.ai/api/v1/datasets/63cebc185bc9dbe3ed851dbe', created_at='2023-01-23T17:04:15.000Z', dataset_id='63cebc185bc9dbe3ed851dbe', filename='/test1.jpg', name='test1.jpg', type='file', id='63cebe0f6f60196b004423d9', spec=None, creator='myfuncont@gmail.com', _description=None, annotations_count=3)
@@ -109,6 +118,8 @@ pipeline.pipeline_executions.list()
 ```
 
 If you want to find out more about all of these commands, including descriptions of each parameter they take as input, [read more here](https://dlportal-demo.redoc.ly/resources/dtlpy/dl/).
+
+You can [also check our Tutorials page](https://developers.dataloop.ai/tutorials/faas/) for more code snippets you can use.
 
 ### Creating Pipelines in the Dataloop Web UI
 
