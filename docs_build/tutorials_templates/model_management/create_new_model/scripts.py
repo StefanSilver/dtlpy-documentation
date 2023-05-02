@@ -1,4 +1,4 @@
-import dtlpy as dl
+_import dtlpy as dl
 
 
 def func1():
@@ -82,7 +82,7 @@ def func5():
 
 def func6():
     model = dl.models.get(model_id='<model_id>')
-    item = dl.items.get(model_id='<item_id>')
+    item = dl.items.get(item_id='<item_id>')
 
     execution = model.predict(item_ids=[item.id])
     # after a few seconds, update your execution from the cloud
